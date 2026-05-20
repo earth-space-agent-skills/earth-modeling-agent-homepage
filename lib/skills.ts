@@ -85,67 +85,54 @@ export const skillGroups: SkillGroup[] = [
       { name: "cice-skill", href: "https://github.com/Earth-Space-Modeling-skills/cice-skill", long: "CICE Consortium sea-ice model", status: "scaffold" },
     ],
   },
+  {
+    slug: "heliophysics-models",
+    idx: "06",
+    nm: "Heliophysics / space physics models",
+    short: "Heliophysics models",
+    dsc: "Space-plasma and solar-wind models maintained alongside the core org.",
+    skills: [
+      { name: "laps-skill",            href: "https://github.com/huangzesen/laps-skill",            long: "LAPS, the UCLA-Pseudo-Spectral 3D Hall-MHD Fortran code (LingTai skill)", status: "complete" },
+      { name: "lingtai-batsrus-skill", href: "https://github.com/huangzesen/lingtai-batsrus-skill", long: "BATS-R-US, the Block-Adaptive Tree Solar-wind Roe-type Upwind Scheme MHD solver at the core of SWMF", status: "complete" },
+    ],
+  },
+  {
+    slug: "heliophysics-data",
+    idx: "07",
+    nm: "Heliophysics observation / data access",
+    short: "Heliophysics data",
+    dsc: "MCP servers and Python libraries for heliophysics data archives.",
+    skills: [
+      { name: "xhelio-cdaweb", href: "https://github.com/huangzesen/xhelio-cdaweb", long: "NASA CDAWeb data access for heliophysics: MCP server + Python library", status: "complete" },
+      { name: "xhelio-spice",  href: "https://github.com/huangzesen/xhelio-spice",  long: "SPICE toolkit access for heliophysics",                                    status: "complete" },
+      { name: "xhelio-pds",    href: "https://github.com/huangzesen/xhelio-pds",    long: "NASA PDS (Planetary Data System) access for heliophysics",                 status: "complete" },
+    ],
+  },
 ];
 
-export type PartnerSkill = {
+// Partner skill repos are folded into skillGroups above as additional domain groups.
+// /#partners is now a People grid.
+
+export type Person = {
   name: string;
-  href: string;
-  long: string;
-  author: string;
+  affiliation: string;
+  author?: boolean;
+  note?: string;
 };
 
-export type PartnerGroup = {
-  slug: string;
-  nm: string;
-  dsc: string;
-  skills: PartnerSkill[];
-};
-
-export const partnerGroups: PartnerGroup[] = [
-  {
-    slug: "helio-models",
-    nm: "Heliophysics / space physics models",
-    dsc: "Partner skill repos for space physics models maintained outside the org namespace.",
-    skills: [
-      {
-        name: "laps-skill",
-        href: "https://github.com/huangzesen/laps-skill",
-        long: "LingTai progressive-disclosure skill for LAPS, the UCLA-Pseudo-Spectral 3D Hall-MHD Fortran code.",
-        author: "@huangzesen",
-      },
-      {
-        name: "lingtai-batsrus-skill",
-        href: "https://github.com/huangzesen/lingtai-batsrus-skill",
-        long: "Skill for BATS-R-US, the Block-Adaptive Tree Solar-wind Roe-type Upwind Scheme MHD solver at the core of SWMF.",
-        author: "@huangzesen",
-      },
-    ],
-  },
-  {
-    slug: "helio-data",
-    nm: "Heliophysics observation / data access",
-    dsc: "Partner repos providing MCP servers and libraries for heliophysics data archives.",
-    skills: [
-      {
-        name: "xhelio-cdaweb",
-        href: "https://github.com/huangzesen/xhelio-cdaweb",
-        long: "NASA CDAWeb data access for heliophysics: MCP server + Python library.",
-        author: "@huangzesen",
-      },
-      {
-        name: "xhelio-spice",
-        href: "https://github.com/huangzesen/xhelio-spice",
-        long: "SPICE toolkit access for heliophysics.",
-        author: "@huangzesen",
-      },
-      {
-        name: "xhelio-pds",
-        href: "https://github.com/huangzesen/xhelio-pds",
-        long: "NASA PDS (Planetary Data System) access for heliophysics.",
-        author: "@huangzesen",
-      },
-    ],
-  },
+export const people: Person[] = [
+  { name: "Koutian Wu",      affiliation: "PhD Student, UT Austin", author: true,  note: "*equal contribution" },
+  { name: "Zesen Huang",     affiliation: "Postdoc, UCLA",          author: true,  note: "*equal contribution, corresponding" },
+  { name: "Weihao Liu",      affiliation: "PhD Student, UMich",     author: true,  note: "*equal contribution" },
+  { name: "Liuwei Xu",       affiliation: "UCLA" },
+  { name: "Chuanfei Dong",   affiliation: "Boston University" },
+  { name: "Marco Velli",     affiliation: "Professor, UCLA" },
+  { name: "Tamas I. Gombosi",affiliation: "Professor, UMich" },
+  { name: "Jiachen Liu",     affiliation: "Meta" },
+  { name: "Zigong Xu",       affiliation: "" },
+  { name: "Yuhan Wang",      affiliation: "ETH Zürich" },
+  { name: "Liting Mai",      affiliation: "UIUC" },
+  { name: "Tian Zhou",       affiliation: "PNNL" },
 ];
 
 export const ORG_HANDLE = "earth-space-agent-skills";

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { OrbitalHero } from "@/components/OrbitalHero";
-import { skillGroups, partnerGroups, ORG_URL, ORG_NAME } from "@/lib/skills";
+import { skillGroups, people, ORG_URL, ORG_NAME } from "@/lib/skills";
 
 export const metadata: Metadata = {
   title: `${ORG_NAME} · Skill packages for Earth and space system models`,
@@ -8,9 +8,14 @@ export const metadata: Metadata = {
     "Curated, progressive-disclosure skill packages for Earth and space system models. Designed to be loaded by AI coding agents and to serve as durable human-readable references.",
 };
 
-const totalSkills =
-  skillGroups.reduce((n, g) => n + g.skills.length, 0) +
-  partnerGroups.reduce((n, g) => n + g.skills.length, 0);
+const totalSkills = skillGroups.reduce((n, g) => n + g.skills.length, 0);
+
+function slugifyName(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 export default function HomePage() {
   return (
@@ -194,38 +199,42 @@ export default function HomePage() {
       <section className="stakes" id="partners">
         <div className="stakes-inner">
           <div className="stakes-main">
-            <span className="mono reveal">— Partner skill repos</span>
+            <span className="mono reveal">— People</span>
             <h2 className="stakes-title reveal">
               Maintained by collaborators, part of the broader effort.
             </h2>
             <div className="stakes-body directions-body reveal">
               <p>
-                These repos live in their authors' own namespaces. They follow
-                the same progressive-disclosure skill pattern and ship
-                alongside the core org.
+                <strong>Bold</strong> names are authors of this effort. The
+                rest are collaborators and advisors across institutions.
               </p>
-              {partnerGroups.map((g) => (
-                <div key={g.slug} className="skill-group">
-                  <h3 className="skill-group-title">{g.nm}</h3>
-                  <ul className="skill-list">
-                    {g.skills.map((s) => (
-                      <li key={s.name}>
-                        <a
-                          className="skill-link"
-                          href={s.href}
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <strong>{s.name}</strong>
-                        </a>
-                        <span className="skill-desc">
-                          {" "}(by {s.author}), {s.long}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              <ul className="people-grid">
+                {people.map((p) => {
+                  const slug = slugifyName(p.name);
+                  return (
+                    <li key={p.name} className="person">
+                      <div
+                        className="person-avatar"
+                        role="img"
+                        aria-label={p.name}
+                        data-name={p.name}
+                        data-photo-path={`/people/${slug}.jpg`}
+                      >
+                        <span className="person-avatar-name">{p.name}</span>
+                      </div>
+                      <div className="person-meta">
+                        <div className={`person-name${p.author ? " is-author" : ""}`}>
+                          {p.name}
+                          {p.note ? <span className="person-note"> {p.note}</span> : null}
+                        </div>
+                        {p.affiliation ? (
+                          <div className="person-affil">{p.affiliation}</div>
+                        ) : null}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>
