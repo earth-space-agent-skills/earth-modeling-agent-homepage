@@ -25,7 +25,7 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-const THEME_INIT = `(function(){try{var K='si-theme',s=localStorage.getItem(K),p=window.matchMedia('(prefers-color-scheme: dark)').matches,i=s||(p?'dark':'light');document.documentElement.setAttribute('data-theme',i);}catch(e){}})();`;
+const THEME_INIT = `(function(){try{var K='si-theme',s=localStorage.getItem(K),i=s||'light';document.documentElement.setAttribute('data-theme',i);}catch(e){}})();`;
 
 export default function RootLayout({
   children,
