@@ -41,10 +41,7 @@ a{color:inherit;text-decoration:none}
 .nav-brand{display:flex;align-items:center;gap:12px;font-weight:500;color:var(--ink);letter-spacing:-.01em;font-size:15px;min-width:0}
 .nav-brand span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .nav-brand .logo{width:42px;height:42px;position:relative;flex:0 0 42px}
-.theme-logo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
-.theme-logo-dark{display:none}
-[data-theme="dark"] .theme-logo-light{display:none}
-[data-theme="dark"] .theme-logo-dark{display:block}
+.nav-brand .logo img, footer .footer-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
 .nav-links{display:flex;gap:36px;font-size:13.5px;color:var(--ink-3)}
 .nav-links > a, .nav-links > .nav-dd > :is(a, button){background:none;border:none;padding:0;cursor:pointer;font:inherit;color:inherit;transition:color .2s var(--ease);display:inline-flex;align-items:center;gap:6px}
 .nav-links a:hover, .nav-links > .nav-dd > :is(a, button):hover{color:var(--ink)}

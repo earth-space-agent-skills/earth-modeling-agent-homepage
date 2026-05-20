@@ -73,8 +73,7 @@ export function Nav() {
       <nav className="nav" id="nav">
         <a className="nav-brand" href={brandHref}>
           <span className="logo" aria-hidden="true">
-            <img className="theme-logo theme-logo-light" src="/logo/logo_black.png" alt="" />
-            <img className="theme-logo theme-logo-dark" src="/logo/logo_white.png" alt="" />
+            <img src="/logo/Earth-Space-Modeling-logo.png" alt="" />
           </span>
           <span>{ORG_NAME}</span>
         </a>

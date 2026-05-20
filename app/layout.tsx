@@ -9,13 +9,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/logo/logo_black.png",
-        sizes: "500x500",
+        url: "/logo/Earth-Space-Modeling-logo.png",
         type: "image/png",
       },
     ],
-    shortcut: "/logo/logo_black.png",
-    apple: "/logo/logo_black.png",
+    shortcut: "/logo/Earth-Space-Modeling-logo.png",
+    apple: "/logo/Earth-Space-Modeling-logo.png",
   },
 };
 

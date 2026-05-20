@@ -26,8 +26,7 @@ export function Footer() {
         <div>
           <div className="brand">
             <span className="footer-logo" aria-hidden="true">
-              <img className="theme-logo theme-logo-light" src="/logo/logo_black.png" alt="" />
-              <img className="theme-logo theme-logo-dark" src="/logo/logo_white.png" alt="" />
+              <img src="/logo/Earth-Space-Modeling-logo.png" alt="" />
             </span>
             {ORG_NAME}
           </div>
