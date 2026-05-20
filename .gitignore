@@ -8,3 +8,4 @@ _site/
 next-env.d.ts
 tsconfig.tsbuildinfo
 output/
+.vercel
