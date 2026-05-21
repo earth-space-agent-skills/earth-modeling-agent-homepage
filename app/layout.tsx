@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./skin.css";
 
 export const metadata: Metadata = {
   title:
@@ -24,7 +25,7 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-const THEME_INIT = `(function(){try{var K='si-theme',s=localStorage.getItem(K),i=s||'light';document.documentElement.setAttribute('data-theme',i);}catch(e){}})();`;
+const THEME_INIT = `(function(){document.documentElement.setAttribute('data-theme','light');})();`;
 
 export default function RootLayout({
   children,

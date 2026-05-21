@@ -1,0 +1,246 @@
+/* =========================================================
+   EarthSpace AI — Research Lab skin
+   Modern AI-lab aesthetic (Anthropic/OpenAI lineage).
+   Off-white paper, serif display, one muted accent, lots of
+   air. Overrides global tokens and re-tunes a few section
+   visuals without touching base structure.
+   ========================================================= */
+
+:root, [data-theme="light"], [data-theme="dark"] {
+  /* Warm paper stack */
+  --paper:   #faf8f3;
+  --paper-2: #f3efe6;
+  --paper-3: #ece7d9;
+
+  /* Hairlines */
+  --line:   #e4dfd1;
+  --line-2: #cfc8b5;
+  --line-3: #a89e85;
+
+  /* Ink (warm near-black) */
+  --ink:   #1a1814;
+  --ink-2: #3a362e;
+  --ink-3: #6b6557;
+  --ink-4: #9b9483;
+
+  /* Single muted accent (clay) */
+  --accent:      #b8542a;
+  --accent-wash: rgba(184, 84, 42, 0.08);
+  --accent-ink:  #8f3f1f;
+
+  /* Serif display — research-paper feel */
+  --display-family: var(--font-serif);
+  --display-weight: 400;
+  --display-track:  -.025em;
+}
+
+html, body { background: var(--paper); color: var(--ink-2); }
+::selection { background: var(--ink); color: var(--paper); }
+
+/* Larger comfortable base */
+body { font-size: 17px; line-height: 1.6; }
+
+/* ---- NAV ---- */
+.nav {
+  background: color-mix(in oklab, var(--paper) 88%, transparent);
+  border-bottom: none;
+}
+.nav.scrolled { border-bottom: 1px solid var(--line); }
+.nav-brand { color: var(--ink); font-weight: 500; font-size: 15px; letter-spacing: -.01em; }
+.nav-links { font-family: var(--font-sans); font-size: 14px; letter-spacing: 0; text-transform: none; color: var(--ink-3); }
+.nav-links a:hover { color: var(--accent); }
+
+/* ---- BUTTONS ---- */
+.btn {
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: -.005em;
+  text-transform: none;
+  padding: 12px 22px;
+  min-height: 46px;
+  border-color: var(--ink);
+  background: transparent;
+  color: var(--ink);
+}
+.btn:hover { background: var(--ink); color: var(--paper); transform: none; }
+.btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+.btn.ghost { background: transparent; border-color: var(--line-2); color: var(--ink-2); }
+.btn.ghost:hover { background: var(--paper-2); color: var(--ink); border-color: var(--ink-3); }
+
+/* ---- HERO ---- */
+.hero {
+  border-bottom: none;
+  padding-top: clamp(120px, 18vh, 200px);
+  padding-bottom: clamp(80px, 12vh, 140px);
+  min-height: auto;
+}
+.hero::before {
+  /* No tech grid — use a soft warm wash instead */
+  background-image: none;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, var(--accent-wash) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 40% at 10% 80%, rgba(184, 84, 42, 0.04) 0%, transparent 60%);
+  opacity: 1;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.hero-headline {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -.03em;
+  color: var(--ink);
+  font-size: clamp(52px, 7vw, 108px);
+  line-height: 1.02;
+}
+.hero-headline .shy { color: var(--ink-3); font-style: italic; }
+.hero-accent {
+  color: var(--accent);
+  font-weight: 400;
+  font-style: italic;
+}
+.hero-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.3vw, 19px);
+  color: var(--ink-3);
+  line-height: 1.6;
+  max-width: 52ch;
+}
+.hero-sub code {
+  font-family: var(--font-mono);
+  font-size: .88em;
+  background: var(--paper-2);
+  color: var(--ink);
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+}
+
+/* ---- ORBITAL ---- */
+.hero-orbital {
+  color: var(--ink-4);
+  opacity: .92;
+  --orbital-ty: -120px;
+}
+@media (max-width: 960px) {
+  .hero-orbital { --orbital-ty: 0px; }
+}
+.orbit-path { stroke: var(--ink-4); opacity: .35; stroke-width: 0.7; }
+.orbit-path.accent { stroke: var(--accent); opacity: .8; stroke-width: 1.1; }
+.orb-core .core-label { fill: var(--ink-3); }
+.hero-orbital .orb-label {
+  background: color-mix(in oklab, var(--paper) 95%, transparent);
+  border-color: var(--line);
+  border-radius: 999px;
+  color: var(--ink-2);
+  padding: 5px 12px;
+  font-family: var(--font-sans);
+}
+.hero-orbital .orb-label:hover,
+.hero-orbital .orb-label:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: none;
+}
+.hero-orbital .lbl-idx { color: var(--ink-4); font-family: var(--font-mono); font-size: 9px; }
+.hero-orbital .lbl-nm  { color: var(--ink); font-family: var(--font-sans); text-transform: none; letter-spacing: -.005em; font-weight: 500; font-size: 11.5px; }
+
+/* ---- SECTIONS ---- */
+.stakes, .coda { border-color: var(--line); }
+.stakes-title, .coda h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -.025em;
+  color: var(--ink);
+  line-height: 1.05;
+}
+.stakes-body, .coda p { color: var(--ink-2); }
+.stakes-body strong, .accent-strong { color: var(--ink); font-weight: 500; }
+.mono {
+  font-family: var(--font-sans);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13px;
+  color: var(--ink-3);
+  font-weight: 400;
+}
+.mono::before { content: ""; display: none; }
+
+/* Tenets → quiet rows */
+.tenets { border-top-color: var(--line); }
+.tenets li { border-bottom-color: var(--line); padding: 22px 0; }
+.tenets li .k {
+  font-family: var(--font-mono);
+  color: var(--ink-4);
+  font-size: 11px;
+  letter-spacing: 0;
+}
+.tenets li .v { font-size: 15.5px; color: var(--ink-2); }
+.tenets li .v b { color: var(--ink); font-weight: 500; }
+
+/* Skill list — quiet research-paper rows */
+.skill-group-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--ink);
+  letter-spacing: -.01em;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  text-transform: none;
+}
+.skill-list li {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.skill-list li:hover { background: var(--paper-2); }
+.skill-link strong {
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+.skill-link:hover strong { color: var(--accent); }
+.skill-desc { color: var(--ink-3); font-size: 15px; }
+.skill-maintainer { color: var(--ink-4); font-size: 13.5px; }
+.skill-maintainer .gh { color: var(--accent); font-family: var(--font-mono); }
+
+/* Status dots */
+.status-dot.complete { background: var(--accent); box-shadow: none; }
+.status-dot.scaffold { background: transparent; border: 1px solid var(--line-2); }
+
+/* Layout tree */
+.layout-tree {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  padding: 24px 28px;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* Coda → quiet manifesto end-page */
+.coda {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  padding: 160px var(--pad-x);
+}
+.coda h2 {
+  font-size: clamp(40px, 5vw, 72px);
+  white-space: normal;
+  text-wrap: balance;
+  max-width: 18ch;
+}
+.coda p { font-size: 19px; line-height: 1.55; color: var(--ink-3); }
+
+/* Footer */
+footer { color: var(--ink-3); }
+footer .brand { color: var(--ink); font-weight: 500; }
+.footer-bar { border-top-color: var(--line); color: var(--ink-4); }
