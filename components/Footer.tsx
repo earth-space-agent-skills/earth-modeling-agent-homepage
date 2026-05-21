@@ -41,7 +41,7 @@ export function Footer() {
           <ul>
             {skillGroups.map((g) => (
               <li key={g.slug}>
-                <a href="#skills">{g.short}</a>
+                <a href={`#${g.slug}`}>{g.short}</a>
               </li>
             ))}
           </ul>

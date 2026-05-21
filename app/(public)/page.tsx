@@ -148,7 +148,7 @@ export default function HomePage() {
                 being filled in.
               </p>
               {skillGroups.map((g) => (
-                <div key={g.slug} className="skill-group">
+                <div key={g.slug} id={g.slug} className="skill-group">
                   <h3 className="skill-group-title">{g.nm}</h3>
                   <ul className="skill-list">
                     {g.skills.map((s) => (
