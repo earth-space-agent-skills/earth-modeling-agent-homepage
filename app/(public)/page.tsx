@@ -22,9 +22,9 @@ export default function HomePage() {
     <>
       <header className="hero" id="top">
         <h1 className="hero-headline" id="headline">
-          Earth and space system models,<br />
+          Democratizing Earth and Space Sciences Modeling<br />
           <span className="shy">
-            <span className="hero-accent">packaged</span> for AI agents.
+            with <span className="hero-accent">Artificial Intelligence</span>.
           </span>
         </h1>
 
@@ -204,10 +204,6 @@ export default function HomePage() {
               Maintained by collaborators, part of the broader effort.
             </h2>
             <div className="stakes-body directions-body reveal">
-              <p>
-                <strong>Bold</strong> names are authors of this effort. The
-                rest are collaborators and advisors across institutions.
-              </p>
               <ul className="people-grid">
                 {people.map((p) => {
                   const slug = slugifyName(p.name);
@@ -266,6 +262,10 @@ export default function HomePage() {
           Open an issue or PR on the relevant repo. For new model coverage that
           fits the scope (Earth, ocean, atmosphere, land, ice, space weather,
           planetary), open an issue on the org before starting a new repo.
+        </p>
+        <p className="reveal coda-sub">
+          Contact:{" "}
+          <a href="mailto:ktktwu@utexas.edu">ktktwu@utexas.edu</a>
         </p>
         <div className="ctas reveal">
           <a className="btn primary" href={ORG_URL} target="_blank" rel="noopener">

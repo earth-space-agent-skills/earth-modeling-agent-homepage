@@ -121,11 +121,11 @@ export type Person = {
 };
 
 export const people: Person[] = [
-  { name: "Koutian Wu",      affiliation: "PhD Student, UT Austin", author: true,  note: "*equal contribution" },
-  { name: "Zesen Huang",     affiliation: "Postdoc, UCLA",          author: true,  note: "*equal contribution, corresponding" },
-  { name: "Weihao Liu",      affiliation: "PhD Student, UMich",     author: true,  note: "*equal contribution" },
+  { name: "Koutian Wu",      affiliation: "PhD Student, UT Austin", author: true },
+  { name: "Zesen Huang",     affiliation: "Postdoc, UCLA",          author: true,  note: "corresponding" },
+  { name: "Weihao Liu",      affiliation: "PhD Candidate, UMich",   author: true },
   { name: "Liuwei Xu",       affiliation: "UCLA" },
-  { name: "Chuanfei Dong",   affiliation: "Boston University" },
+  { name: "Chuanfei Dong",   affiliation: "Professor, Boston University" },
   { name: "Marco Velli",     affiliation: "Professor, UCLA" },
   { name: "Tamas I. Gombosi",affiliation: "Professor, UMich" },
   { name: "Jiachen Liu",     affiliation: "Meta" },
