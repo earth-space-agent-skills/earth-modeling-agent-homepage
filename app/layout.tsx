@@ -4,7 +4,7 @@ import "./skin.css";
 
 export const metadata: Metadata = {
   title:
-    "Earth-Space-Modeling-skills — Skill packages for Earth and space system models",
+    "earth-space-ai.org — Skill packages for Earth and space system models",
   description:
     "Curated, progressive-disclosure skill packages for Earth and space system models. Loadable by AI coding agents; readable by humans.",
   icons: {

@@ -30,11 +30,11 @@ export const skillGroups: SkillGroup[] = [
     short: "Earth-system",
     dsc: "Coupled Earth and climate system models.",
     skills: [
-      { name: "cam-skill", href: "https://github.com/earth-space-agent-skills/cam-skill", long: "Community Atmosphere Model (CAM)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "cesm-skill", href: "https://github.com/earth-space-agent-skills/cesm-skill", long: "Community Earth System Model (CESM) superproject", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "e3sm-skill", href: "https://github.com/earth-space-agent-skills/e3sm-skill", long: "Energy Exascale Earth System Model (E3SM)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "noresm-skill", href: "https://github.com/earth-space-agent-skills/noresm-skill", long: "Norwegian Earth System Model (NorESM)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "fms-skill", href: "https://github.com/earth-space-agent-skills/fms-skill", long: "GFDL Flexible Modeling System (FMS) framework", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "cam-skill", href: "https://github.com/earth-space-ai/cam-skill", long: "Community Atmosphere Model (CAM)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "cesm-skill", href: "https://github.com/earth-space-ai/cesm-skill", long: "Community Earth System Model (CESM) superproject", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "e3sm-skill", href: "https://github.com/earth-space-ai/e3sm-skill", long: "Energy Exascale Earth System Model (E3SM)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "noresm-skill", href: "https://github.com/earth-space-ai/noresm-skill", long: "Norwegian Earth System Model (NorESM)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "fms-skill", href: "https://github.com/earth-space-ai/fms-skill", long: "GFDL Flexible Modeling System (FMS) framework", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
       { name: "ESFlow preprint", href: "https://egusphere.copernicus.org/preprints/2026/egusphere-2026-2237/", long: "module-grounded agentic AI framework for complex Earth system model analysis (Tian Zhou et al., 2026)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
       { name: "ESFlow Zenodo record", href: "https://zenodo.org/records/19350842", long: "source code, sample data, and benchmark outputs for ESFlow", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
     ],
@@ -46,13 +46,13 @@ export const skillGroups: SkillGroup[] = [
     short: "Atmosphere",
     dsc: "Atmospheric circulation, weather, and chemistry models.",
     skills: [
-      { name: "wrf-skill", href: "https://github.com/earth-space-agent-skills/wrf-skill", long: "Weather Research and Forecasting (WRF)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "waccm-skill", href: "https://github.com/earth-space-agent-skills/waccm-skill", long: "Whole Atmosphere Community Climate Model (WACCM)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "waccmx-skill", href: "https://github.com/earth-space-agent-skills/waccmx-skill", long: "Extended WACCM (ionosphere/thermosphere)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "gfdl-fv3-skill", href: "https://github.com/earth-space-agent-skills/gfdl-fv3-skill", long: "GFDL FV3 cubed-sphere dynamical core", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "openifs-skill", href: "https://github.com/earth-space-agent-skills/openifs-skill", long: "ECMWF OpenIFS (research/education)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "regcm-skill", href: "https://github.com/earth-space-agent-skills/regcm-skill", long: "ICTP Regional Climate Model", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "geos-chem-skill", href: "https://github.com/earth-space-agent-skills/geos-chem-skill", long: "GEOS-Chem atmospheric chemistry", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "wrf-skill", href: "https://github.com/earth-space-ai/wrf-skill", long: "Weather Research and Forecasting (WRF)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "waccm-skill", href: "https://github.com/earth-space-ai/waccm-skill", long: "Whole Atmosphere Community Climate Model (WACCM)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "waccmx-skill", href: "https://github.com/earth-space-ai/waccmx-skill", long: "Extended WACCM (ionosphere/thermosphere)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "gfdl-fv3-skill", href: "https://github.com/earth-space-ai/gfdl-fv3-skill", long: "GFDL FV3 cubed-sphere dynamical core", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "openifs-skill", href: "https://github.com/earth-space-ai/openifs-skill", long: "ECMWF OpenIFS (research/education)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "regcm-skill", href: "https://github.com/earth-space-ai/regcm-skill", long: "ICTP Regional Climate Model", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "geos-chem-skill", href: "https://github.com/earth-space-ai/geos-chem-skill", long: "GEOS-Chem atmospheric chemistry", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
     ],
   },
   {
@@ -62,12 +62,12 @@ export const skillGroups: SkillGroup[] = [
     short: "Land / hydrology",
     dsc: "Land surface models and watershed hydrology.",
     skills: [
-      { name: "noahmp-skill", href: "https://github.com/earth-space-agent-skills/noahmp-skill", long: "Noah-MP land surface model and HRLDAS", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "ctsm-skill", href: "https://github.com/earth-space-agent-skills/ctsm-skill", long: "Community Terrestrial Systems Model (CTSM/CLM)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "jules-skill", href: "https://github.com/earth-space-agent-skills/jules-skill", long: "Joint UK Land Environment Simulator (JULES)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "summa-skill", href: "https://github.com/earth-space-agent-skills/summa-skill", long: "Structure for Unifying Multiple Modeling Alternatives (SUMMA)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "vic-skill", href: "https://github.com/earth-space-agent-skills/vic-skill", long: "Variable Infiltration Capacity (VIC) macroscale hydrologic model", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "parflow-skill", href: "https://github.com/earth-space-agent-skills/parflow-skill", long: "ParFlow parallel watershed flow model", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "noahmp-skill", href: "https://github.com/earth-space-ai/noahmp-skill", long: "Noah-MP land surface model and HRLDAS", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "ctsm-skill", href: "https://github.com/earth-space-ai/ctsm-skill", long: "Community Terrestrial Systems Model (CTSM/CLM)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "jules-skill", href: "https://github.com/earth-space-ai/jules-skill", long: "Joint UK Land Environment Simulator (JULES)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "summa-skill", href: "https://github.com/earth-space-ai/summa-skill", long: "Structure for Unifying Multiple Modeling Alternatives (SUMMA)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "vic-skill", href: "https://github.com/earth-space-ai/vic-skill", long: "Variable Infiltration Capacity (VIC) macroscale hydrologic model", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "parflow-skill", href: "https://github.com/earth-space-ai/parflow-skill", long: "ParFlow parallel watershed flow model", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
     ],
   },
   {
@@ -77,10 +77,10 @@ export const skillGroups: SkillGroup[] = [
     short: "Ocean",
     dsc: "Global and regional ocean circulation models.",
     skills: [
-      { name: "mom6-skill", href: "https://github.com/earth-space-agent-skills/mom6-skill", long: "Modular Ocean Model 6 (MOM6)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "mitgcm-skill", href: "https://github.com/earth-space-agent-skills/mitgcm-skill", long: "MIT General Circulation Model (MITgcm)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "fesom2-skill", href: "https://github.com/earth-space-agent-skills/fesom2-skill", long: "FESOM2 unstructured-mesh ocean", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "roms-skill", href: "https://github.com/earth-space-agent-skills/roms-skill", long: "Regional Ocean Modeling System (ROMS)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "mom6-skill", href: "https://github.com/earth-space-ai/mom6-skill", long: "Modular Ocean Model 6 (MOM6)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "mitgcm-skill", href: "https://github.com/earth-space-ai/mitgcm-skill", long: "MIT General Circulation Model (MITgcm)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "fesom2-skill", href: "https://github.com/earth-space-ai/fesom2-skill", long: "FESOM2 unstructured-mesh ocean", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "roms-skill", href: "https://github.com/earth-space-ai/roms-skill", long: "Regional Ocean Modeling System (ROMS)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
     ],
   },
   {
@@ -90,7 +90,7 @@ export const skillGroups: SkillGroup[] = [
     short: "Sea ice",
     dsc: "Sea-ice dynamics and thermodynamics.",
     skills: [
-      { name: "cice-skill", href: "https://github.com/earth-space-agent-skills/cice-skill", long: "CICE Consortium sea-ice model", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "cice-skill", href: "https://github.com/earth-space-ai/cice-skill", long: "CICE Consortium sea-ice model", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
     ],
   },
   {
@@ -206,6 +206,6 @@ export const ROLE_SECTIONS: {
   },
 ];
 
-export const ORG_HANDLE = "earth-space-agent-skills";
-export const ORG_URL = "https://github.com/earth-space-agent-skills";
-export const ORG_NAME = "Earth-Space-Modeling-skills";
+export const ORG_HANDLE = "earth-space-ai";
+export const ORG_URL = "https://github.com/earth-space-ai";
+export const ORG_NAME = "earth-space-ai.org";
