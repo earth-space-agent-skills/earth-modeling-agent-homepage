@@ -26,7 +26,11 @@ function PersonCard({ p }: { p: Person }) {
   const inner = (
     <>
       <div className="portrait" style={portraitStyle}>
-        <span>{initials}</span>
+        {p.photo ? (
+          <img src={p.photo} alt={p.name} loading="lazy" />
+        ) : (
+          <span>{initials}</span>
+        )}
       </div>
       <div className="person-body">
         <h4 className="nm">{p.name}</h4>

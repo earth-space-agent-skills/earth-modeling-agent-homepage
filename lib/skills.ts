@@ -132,7 +132,7 @@ export const skillGroups: SkillGroup[] = [
 // Partner skill repos are folded into skillGroups above as additional domain groups.
 // /#partners is now a People grid.
 
-export type PersonRole = "science" | "executive" | "scholars";
+export type PersonRole = "science" | "postdoc" | "executive" | "scholars";
 
 export type Person = {
   name: string;
@@ -144,6 +144,7 @@ export type Person = {
   link?: string;     // homepage / Google Scholar / personal site
   initials?: string; // portrait initials (auto-derived if omitted)
   gradient?: string; // CSS background for the gradient portrait
+  photo?: string;    // /public path to a portrait image (overrides initials)
 };
 
 // Gradient palette borrowed from ScienceIntelligence/sci_intelligence_homepage
@@ -159,8 +160,11 @@ const GRAD_H = "linear-gradient(165deg, #e4ecf5 0%, #a8bdd6 45%, #27344a 110%)";
 
 export const people: Person[] = [
   // Scientific Committee
-  { name: "Marco Velli",     affiliation: "Professor · UCLA",              role: "science", initials: "MV", gradient: GRAD_A },
-  { name: "Chuanfei Dong",   affiliation: "Professor · Boston University", role: "science", initials: "CD", gradient: GRAD_B },
+  { name: "Marco Velli",     affiliation: "Professor · UCLA",              role: "science", link: "https://epss.ucla.edu/marco-velli/",            photo: "/people/marco-velli.jpg",    initials: "MV", gradient: GRAD_A },
+  { name: "Chuanfei Dong",   affiliation: "Professor · Boston University", role: "science", link: "https://www.bu.edu/astronomy/profile/chuanfei-dong/", photo: "/people/chuanfei-dong.jpg", initials: "CD", gradient: GRAD_B },
+
+  // Postdoc
+  { name: "Zigong Xu",       affiliation: "Postdoc · Caltech",             role: "postdoc",  link: "https://zigongxu.github.io/",                  photo: "/people/zigong-xu.jpg",      initials: "ZX", gradient: GRAD_C },
 
   // Executive Committee
   { name: "Zesen Huang",     affiliation: "Postdoc · UCLA",                role: "executive", author: true, note: "corresponding", github: "huangzesen",                                                  initials: "ZH", gradient: GRAD_D },
@@ -168,11 +172,10 @@ export const people: Person[] = [
 
   // Scholars
   { name: "Weihao Liu",      affiliation: "PhD Candidate · UMich",         role: "scholars", author: true,                                                                                                       initials: "WL", gradient: GRAD_E },
-  { name: "Liuwei Xu",       affiliation: "UCLA",                          role: "scholars", github: "liuwei1997",                                                                                              initials: "LX", gradient: GRAD_F },
+  { name: "Liuwei Xu",       affiliation: "PhD Student · UCLA",            role: "scholars", github: "liuwei1997", link: "https://liuwei1997.github.io/",                                                photo: "/people/liuwei-xu.jpg",     initials: "LX", gradient: GRAD_F },
   { name: "Hejia Geng",      affiliation: "Researcher · Oxford",           role: "scholars",                       link: "https://scholar.google.com/citations?hl=en&user=ameiXi0AAAAJ",                       initials: "HG", gradient: GRAD_B },
-  { name: "Jiachen Liu",     affiliation: "Meta",                          role: "scholars",                                                                                                                    initials: "JL", gradient: GRAD_G },
-  { name: "Zigong Xu",       affiliation: "",                              role: "scholars",                                                                                                                    initials: "ZX", gradient: GRAD_C },
-  { name: "Yuhan Wang",      affiliation: "ETH Zürich",                    role: "scholars",                                                                                                                    initials: "YW", gradient: GRAD_A },
+  { name: "Jiachen Liu",     affiliation: "Meta",                          role: "scholars",                       link: "https://amberljc.github.io/",                                                          photo: "/people/jiachen-liu.jpg",   initials: "JL", gradient: GRAD_G },
+  { name: "Yuhan Wang",      affiliation: "PhD Student · ETH Zürich",      role: "scholars", link: "https://www.linkedin.com/in/yuhan-wang-aa2564214/",                                                  photo: "/people/yuhan-wang.jpg",     initials: "YW", gradient: GRAD_A },
   { name: "Liting Mai",      affiliation: "UIUC",                          role: "scholars",                                                                                                                    initials: "LM", gradient: GRAD_D },
 ];
 
@@ -191,15 +194,22 @@ export const ROLE_SECTIONS: {
     lede: "Faculty advisors and principal investigators whose groups anchor the research agenda.",
   },
   {
-    role: "executive",
+    role: "postdoc",
     idx: "02",
+    label: "Postdoctoral Researchers",
+    eyebrow: "§ Postdoctoral Researchers",
+    lede: "Postdocs leading research directions, mentoring scholars, and translating science into shippable skill packages.",
+  },
+  {
+    role: "executive",
+    idx: "03",
     label: "Executive Committee",
     eyebrow: "§ Executive Committee",
     lede: "Day-to-day operations: releases, issue triage, docs, partner outreach, funder relations, and research-integrity review. The committee reports to the community.",
   },
   {
     role: "scholars",
-    idx: "03",
+    idx: "04",
     label: "Scholars",
     eyebrow: "§ Scholars",
     lede: "Researchers contributing code, papers, knowledge units, and evaluation tasks. Contribution is the organizing principle.",
