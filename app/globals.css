@@ -2503,3 +2503,12 @@ a.stack-chip:focus-visible {
   color: var(--ink-3);
   line-height: 1.35;
 }
+.person-gh {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.74rem;
+  color: var(--ink-3);
+  text-decoration: none;
+}
+.person-gh:hover { color: var(--ink); }

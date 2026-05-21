@@ -95,10 +95,10 @@ export default function HomePage() {
               </p>
               <p>
                 Each repo carries its own license. Each is maintained alongside
-                the model it covers. We currently host{" "}
-                <strong className="accent-strong">{totalSkills} skill repos</strong>{" "}
-                across Earth-system, atmosphere, land, ocean, sea-ice, and
-                heliophysics domains.
+                the model it covers. We currently list{" "}
+                <strong className="accent-strong">{totalSkills} skills and resources</strong>{" "}
+                across Earth-system, atmosphere, land, ocean, sea-ice, solid
+                Earth, and heliophysics domains.
               </p>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function HomePage() {
           <div className="stakes-main">
             <span className="mono reveal">— Models</span>
             <h2 className="stakes-title reveal">
-              Skill repos by domain.
+              Skill repos and resources by domain.
             </h2>
             <div className="stakes-body directions-body reveal">
               <p>
@@ -225,6 +225,16 @@ export default function HomePage() {
                         </div>
                         {p.affiliation ? (
                           <div className="person-affil">{p.affiliation}</div>
+                        ) : null}
+                        {p.github ? (
+                          <a
+                            className="person-gh"
+                            href={`https://github.com/${p.github}`}
+                            target="_blank"
+                            rel="noopener"
+                          >
+                            @{p.github}
+                          </a>
                         ) : null}
                       </div>
                     </li>
