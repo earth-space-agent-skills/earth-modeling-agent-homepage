@@ -218,26 +218,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="stakes" id="layout">
-        <div className="stakes-inner">
-          <div className="stakes-main">
-            <span className="mono reveal">— Anatomy</span>
-            <h2 className="stakes-title reveal">Layout of a skill repo.</h2>
-            <div className="stakes-body reveal">
-              <pre className="layout-tree">{`<model>-skill/
-├── SKILL.md              # Routing hub: when to use, where to look
-├── reference/            # Deep-dive docs by topic
-│   ├── architecture.md
-│   ├── physics.md
-│   ├── workflow.md
-│   ├── debugging.md
-│   └── ...
-└── README.md`}</pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="coda" id="contribute">
         <h2 className="reveal">Contribute.</h2>
         <p className="reveal coda-sub">
