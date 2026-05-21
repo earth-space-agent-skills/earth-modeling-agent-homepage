@@ -3,6 +3,7 @@ export type SkillStatus = "complete" | "scaffold";
 export type SkillMaintainer = {
   name: string;
   github?: string;
+  link?: string;
 };
 
 export type Skill = {
@@ -35,8 +36,8 @@ export const skillGroups: SkillGroup[] = [
       { name: "e3sm-skill", href: "https://github.com/earth-space-ai/e3sm-skill", long: "Energy Exascale Earth System Model (E3SM)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
       { name: "noresm-skill", href: "https://github.com/earth-space-ai/noresm-skill", long: "Norwegian Earth System Model (NorESM)", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
       { name: "fms-skill", href: "https://github.com/earth-space-ai/fms-skill", long: "GFDL Flexible Modeling System (FMS) framework", status: "scaffold", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "ESFlow preprint", href: "https://egusphere.copernicus.org/preprints/2026/egusphere-2026-2237/", long: "module-grounded agentic AI framework for complex Earth system model analysis (Tian Zhou et al., 2026)", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
-      { name: "ESFlow Zenodo record", href: "https://zenodo.org/records/19350842", long: "source code, sample data, and benchmark outputs for ESFlow", status: "complete", maintainer: { name: "Koutian Wu", github: "ktwu01" } },
+      { name: "ESFlow preprint", href: "https://egusphere.copernicus.org/preprints/2026/egusphere-2026-2237/", long: "module-grounded agentic AI framework for complex Earth system model analysis (Tian Zhou et al., 2026)", status: "complete", maintainer: { name: "Tian Zhou", link: "https://www.pnnl.gov/people/tian-zhou" } },
+      { name: "ESFlow Zenodo record", href: "https://zenodo.org/records/19350842", long: "source code, sample data, and benchmark outputs for ESFlow", status: "complete", maintainer: { name: "Tian Zhou", link: "https://www.pnnl.gov/people/tian-zhou" } },
     ],
   },
   {

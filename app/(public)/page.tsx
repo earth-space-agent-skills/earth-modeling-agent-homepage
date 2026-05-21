@@ -142,8 +142,8 @@ export default function HomePage() {
             <div className="stakes-body directions-body reveal">
               <p>
                 <strong>Status legend:</strong>{" "}
-                <span className="status-dot complete" aria-hidden="true" /> deep-dive complete.{" "}
-                <span className="status-dot scaffold" aria-hidden="true" /> scaffold (v0.1.0-scaffold),
+                <span className="status-dot complete" aria-hidden="true" /> deep-dive.{" "}
+                <span className="status-dot scaffold" aria-hidden="true" /> scaffold,
                 routing and source-grounded surface verified, operational depth
                 being filled in.
               </p>
@@ -171,7 +171,17 @@ export default function HomePage() {
                         {s.maintainer ? (
                           <span className="skill-maintainer">
                             {" — "}
-                            {s.maintainer.name}
+                            {s.maintainer.link ? (
+                              <a
+                                href={s.maintainer.link}
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                {s.maintainer.name}
+                              </a>
+                            ) : (
+                              s.maintainer.name
+                            )}
                             {s.maintainer.github ? (
                               <>
                                 {" "}
