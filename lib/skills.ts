@@ -163,8 +163,8 @@ export const people: Person[] = [
   { name: "Chuanfei Dong",   affiliation: "Professor · Boston University", role: "science", initials: "CD", gradient: GRAD_B },
 
   // Executive Committee
-  { name: "Koutian Wu",      affiliation: "PhD Student · UT Austin",       role: "executive", author: true, github: "ktwu01",     link: "https://scholar.google.com/citations?user=s9w1k-cAAAAJ&hl=en", initials: "KW", gradient: GRAD_H },
   { name: "Zesen Huang",     affiliation: "Postdoc · UCLA",                role: "executive", author: true, note: "corresponding", github: "huangzesen",                                                  initials: "ZH", gradient: GRAD_D },
+  { name: "Koutian Wu",      affiliation: "PhD Student · UT Austin",       role: "executive", author: true, github: "ktwu01",     link: "https://scholar.google.com/citations?user=s9w1k-cAAAAJ&hl=en", initials: "KW", gradient: GRAD_H },
 
   // Scholars
   { name: "Weihao Liu",      affiliation: "PhD Candidate · UMich",         role: "scholars", author: true,                                                                                                       initials: "WL", gradient: GRAD_E },
