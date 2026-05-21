@@ -264,7 +264,7 @@ html.js-reveal .reveal.in{opacity:1;transform:none}
 .sec-head-full .sec-lede{font-size:17px;color:var(--ink-3);max-width:60ch;line-height:1.55;margin:0}
 .sec .sec-head-full + .people-grid{margin-top:0}
 
-.people-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));margin-right:-1px}
+.people-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));margin-right:-1px}
 
 .person-card{background:var(--paper);padding:22px 22px 24px;display:flex;flex-direction:column;gap:14px;transition:background .2s var(--ease);border:1px solid var(--line);margin:0 -1px -1px 0}
 .person-card:hover{background:var(--paper-2)}
@@ -2434,84 +2434,6 @@ a.stack-chip:focus-visible {
   line-height: 1.55;
   text-align: center;
 }
-
-/* People grid (/#partners) */
-.people-grid {
-  list-style: none;
-  margin: 1.25rem 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.1rem 1.6rem;
-}
-@media (max-width: 640px) {
-  .people-grid { grid-template-columns: 1fr; }
-}
-.person {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 0.85rem;
-  align-items: center;
-  padding: 0.55rem 0;
-}
-.person-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--paper-3, rgba(127, 127, 127, 0.12));
-  border: 1px solid var(--line-2, rgba(127, 127, 127, 0.22));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  flex: 0 0 56px;
-  color: var(--ink-3);
-}
-.person-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.person-avatar-name {
-  font-family: var(--font-mono, ui-monospace, monospace);
-  font-size: 8.5px;
-  line-height: 1.1;
-  letter-spacing: 0.04em;
-  text-align: center;
-  padding: 0 4px;
-  word-break: break-word;
-  color: var(--ink-3);
-}
-.person-meta { min-width: 0; }
-.person-name {
-  font-size: 0.95rem;
-  line-height: 1.3;
-  color: var(--ink, currentColor);
-}
-.person-name.is-author { font-weight: inherit; }
-.person-note {
-  font-family: var(--font-mono, ui-monospace, monospace);
-  font-size: 0.7rem;
-  letter-spacing: 0.04em;
-  color: var(--ink-3);
-  margin-left: 0.35rem;
-}
-.person-affil {
-  margin-top: 0.15rem;
-  font-size: 0.82rem;
-  color: var(--ink-3);
-  line-height: 1.35;
-}
-.person-gh {
-  display: inline-block;
-  margin-top: 0.2rem;
-  font-family: var(--font-mono, ui-monospace, monospace);
-  font-size: 0.74rem;
-  color: var(--ink-3);
-  text-decoration: none;
-}
-.person-gh:hover { color: var(--ink); }
 
 /* /teams — section lede beneath each role heading */
 .skill-group-lede {
