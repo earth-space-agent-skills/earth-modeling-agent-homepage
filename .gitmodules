@@ -1,0 +1,3 @@
+[submodule "vendor/sci-intelligence-homepage"]
+	path = vendor/sci-intelligence-homepage
+	url = https://github.com/ScienceIntelligence/sci_intelligence_homepage
