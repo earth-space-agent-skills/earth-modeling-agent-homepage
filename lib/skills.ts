@@ -126,27 +126,57 @@ export const skillGroups: SkillGroup[] = [
 // Partner skill repos are folded into skillGroups above as additional domain groups.
 // /#partners is now a People grid.
 
+export type PersonRole = "senior" | "junior" | "postdoc" | "student" | "other";
+
 export type Person = {
   name: string;
   affiliation: string;
+  role: PersonRole;
   author?: boolean;
   note?: string;
   github?: string;
+  link?: string;     // homepage / Google Scholar / personal site
+  initials?: string; // portrait initials (auto-derived if omitted)
+  gradient?: string; // CSS background for the gradient portrait
 };
 
+// Gradient palette borrowed from ScienceIntelligence/sci_intelligence_homepage
+// (supabase/seed.ts), kept as plain CSS so we don't pull in their stack.
+const GRAD_A = "linear-gradient(135deg, #eaf0f7 0%, #b8cbe0 45%, #2f3c52 110%)";
+const GRAD_B = "linear-gradient(135deg, #e4ecf5 0%, #a8bdd6 45%, #27344a 110%)";
+const GRAD_C = "linear-gradient(135deg, #f1f5fb 0%, #c9d8ea 45%, #3a4b64 110%)";
+const GRAD_D = "linear-gradient(135deg, #ecf1f8 0%, #d6dfeb 45%, #445773 110%)";
+const GRAD_E = "linear-gradient(45deg,  #eaf0f7 0%, #b8cbe0 45%, #2f3c52 110%)";
+const GRAD_F = "linear-gradient(165deg, #eaf0f7 0%, #b8cbe0 45%, #2f3c52 110%)";
+const GRAD_G = "linear-gradient(105deg, #dfe8f3 0%, #96adc9 45%, #1f2a3e 110%)";
+const GRAD_H = "linear-gradient(165deg, #e4ecf5 0%, #a8bdd6 45%, #27344a 110%)";
+
 export const people: Person[] = [
-  { name: "Koutian Wu",      affiliation: "PhD Student, UT Austin", author: true,  github: "ktwu01" },
-  { name: "Zesen Huang",     affiliation: "Postdoc, UCLA",          author: true,  note: "corresponding", github: "huangzesen" },
-  { name: "Weihao Liu",      affiliation: "PhD Candidate, UMich",   author: true },
-  { name: "Liuwei Xu",       affiliation: "UCLA", github: "liuwei1997" },
-  { name: "Chuanfei Dong",   affiliation: "Professor, Boston University" },
-  { name: "Marco Velli",     affiliation: "Professor, UCLA" },
-  { name: "Tamas I. Gombosi",affiliation: "Professor, UMich" },
-  { name: "Jiachen Liu",     affiliation: "Meta" },
-  { name: "Zigong Xu",       affiliation: "" },
-  { name: "Yuhan Wang",      affiliation: "ETH Zürich" },
-  { name: "Liting Mai",      affiliation: "UIUC" },
-  { name: "Tian Zhou",       affiliation: "PNNL" },
+  // Professors
+  { name: "Marco Velli",     affiliation: "Professor · UCLA",              role: "senior", initials: "MV", gradient: GRAD_A },
+  { name: "Chuanfei Dong",   affiliation: "Professor · Boston University", role: "senior", initials: "CD", gradient: GRAD_B },
+  // { name: "Tamas I. Gombosi",affiliation: "Professor · UMich",           role: "senior", initials: "TG", gradient: GRAD_C },
+
+  // Postdocs
+  { name: "Zesen Huang",     affiliation: "Postdoc · UCLA",                role: "postdoc", author: true, note: "corresponding", github: "huangzesen", initials: "ZH", gradient: GRAD_D },
+
+  // Collaborators (students + other contributors)
+  { name: "Koutian Wu",      affiliation: "PhD Student · UT Austin",       role: "other", author: true, github: "ktwu01",     link: "https://scholar.google.com/citations?user=s9w1k-cAAAAJ&hl=en", initials: "KW", gradient: GRAD_H },
+  { name: "Weihao Liu",      affiliation: "PhD Candidate · UMich",         role: "other", author: true,                                                                                                       initials: "WL", gradient: GRAD_E },
+  { name: "Liuwei Xu",       affiliation: "UCLA",                          role: "other", github: "liuwei1997",                                                                                              initials: "LX", gradient: GRAD_F },
+  { name: "Hejia Geng",      affiliation: "Researcher · Oxford",           role: "other",                          link: "https://scholar.google.com/citations?hl=en&user=ameiXi0AAAAJ",                      initials: "HG", gradient: GRAD_B },
+  { name: "Jiachen Liu",     affiliation: "Meta",                          role: "other",                                                                                                                     initials: "JL", gradient: GRAD_G },
+  { name: "Zigong Xu",       affiliation: "",                              role: "other",                                                                                                                     initials: "ZX", gradient: GRAD_C },
+  { name: "Yuhan Wang",      affiliation: "ETH Zürich",                    role: "other",                                                                                                                     initials: "YW", gradient: GRAD_A },
+  { name: "Liting Mai",      affiliation: "UIUC",                          role: "other",                                                                                                                     initials: "LM", gradient: GRAD_D },
+  // { name: "Tian Zhou",       affiliation: "PNNL",                        role: "other",                                                                                                                     initials: "TZ", gradient: GRAD_F },
+];
+
+export const ROLE_SECTIONS: { role: PersonRole; idx: string; label: string }[] = [
+  { role: "senior",  idx: "01", label: "Professors" },
+  { role: "junior",  idx: "02", label: "Junior professors" },
+  { role: "postdoc", idx: "03", label: "Postdocs" },
+  { role: "other",   idx: "04", label: "Collaborators" },
 ];
 
 export const ORG_HANDLE = "earth-space-agent-skills";

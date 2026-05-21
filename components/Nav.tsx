@@ -65,7 +65,7 @@ export function Nav() {
   const brandHref = isHome ? "#top" : "/";
   const aboutHref = isHome ? "#about" : "/#about";
   const skillsHref = isHome ? "#skills" : "/#skills";
-  const partnersHref = isHome ? "#partners" : "/#partners";
+  const teamsHref = "/teams";
   const contributeHref = isHome ? "#contribute" : "/#contribute";
 
   return (
@@ -101,7 +101,7 @@ export function Nav() {
               ))}
             </div>
           </div>
-          <a href={partnersHref}>Partners</a>
+          <a href={teamsHref}>Teams</a>
           <a href={contributeHref}>Contribute</a>
         </div>
 
@@ -164,7 +164,7 @@ export function Nav() {
       >
         <a className="nav-mobile-link" href={aboutHref}>About</a>
         <a className="nav-mobile-link" href={skillsHref}>Skills</a>
-        <a className="nav-mobile-link" href={partnersHref}>Partners</a>
+        <a className="nav-mobile-link" href={teamsHref}>Teams</a>
         <a className="nav-mobile-link" href={contributeHref}>Contribute</a>
 
         <div className="nav-mobile-footer">

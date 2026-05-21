@@ -2512,3 +2512,66 @@ a.stack-chip:focus-visible {
   text-decoration: none;
 }
 .person-gh:hover { color: var(--ink); }
+
+/* /teams — SI-style portrait cards (gradient + initials) */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin: 0.75rem 0 0;
+}
+.teams-grid .person-card {
+  background: var(--paper);
+  padding: 18px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s var(--ease, ease);
+}
+.teams-grid a.person-card:hover { background: var(--paper-2, rgba(127,127,127,0.06)); }
+.teams-grid .portrait {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: 0.06em;
+  position: relative;
+  overflow: hidden;
+}
+.teams-grid .portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.22), transparent 45%),
+    repeating-linear-gradient(135deg, transparent 0 6px, rgba(0,0,0,0.04) 6px 7px);
+  pointer-events: none;
+}
+.teams-grid .portrait span {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+.teams-grid .person-body { display: flex; flex-direction: column; gap: 4px; }
+.teams-grid .nm {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--ink, currentColor);
+  letter-spacing: -0.01em;
+}
+.teams-grid .ttl {
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--ink-3);
+}
+
