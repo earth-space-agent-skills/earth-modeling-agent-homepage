@@ -167,11 +167,11 @@ export const people: Person[] = [
   { name: "Zigong Xu",       affiliation: "Postdoc · Caltech",             role: "postdoc",  link: "https://zigongxu.github.io/",                  photo: "/people/zigong-xu.jpg",      initials: "ZX", gradient: GRAD_C },
 
   // Executive Committee
-  { name: "Zesen Huang",     affiliation: "Postdoc · UCLA",                role: "executive", author: true, note: "corresponding", github: "huangzesen",                                                  initials: "ZH", gradient: GRAD_D },
-  { name: "Koutian Wu",      affiliation: "PhD Student · UT Austin",       role: "executive", author: true, github: "ktwu01",     link: "https://scholar.google.com/citations?user=s9w1k-cAAAAJ&hl=en", initials: "KW", gradient: GRAD_H },
+  { name: "Zesen Huang",     affiliation: "Postdoc · UCLA",                role: "executive", author: true, note: "corresponding", github: "huangzesen", link: "https://lingtai.ai/en/about/",                            photo: "/people/zesen.JPG",          initials: "ZH", gradient: GRAD_D },
+  { name: "Koutian Wu",      affiliation: "PhD Student · UT Austin",       role: "executive", author: true, github: "ktwu01",     link: "https://scholar.google.com/citations?user=s9w1k-cAAAAJ&hl=en", photo: "/people/KW-SF.png",          initials: "KW", gradient: GRAD_H },
 
   // Scholars
-  { name: "Weihao Liu",      affiliation: "PhD Candidate · UMich",         role: "scholars", author: true,                                                                                                       initials: "WL", gradient: GRAD_E },
+  { name: "Weihao Liu",      affiliation: "PhD Candidate · UMich",         role: "scholars", author: true,                                                                                                       photo: "/people/weihao-liu.jpg",     initials: "WL", gradient: GRAD_E },
   { name: "Liuwei Xu",       affiliation: "PhD Student · UCLA",            role: "scholars", github: "liuwei1997", link: "https://liuwei1997.github.io/",                                                photo: "/people/liuwei-xu.jpg",     initials: "LX", gradient: GRAD_F },
   { name: "Hejia Geng",      affiliation: "Researcher · Oxford",           role: "scholars",                       link: "https://scholar.google.com/citations?hl=en&user=ameiXi0AAAAJ",                       photo: "/people/hejia-geng.jpg",     initials: "HG", gradient: GRAD_B },
   { name: "Jiachen Liu",     affiliation: "Meta",                          role: "scholars",                       link: "https://amberljc.github.io/",                                                          photo: "/people/jiachen-liu.jpg",   initials: "JL", gradient: GRAD_G },
