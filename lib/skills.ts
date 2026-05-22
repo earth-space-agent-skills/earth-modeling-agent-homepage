@@ -163,6 +163,7 @@ export const people: Person[] = [
   // Scientific Committee
   { name: "Marco Velli",     affiliation: "Professor · UCLA",              role: "science", link: "https://epss.ucla.edu/marco-velli/",            photo: "/people/marco-velli.jpg",    initials: "MV", gradient: GRAD_A },
   { name: "Chuanfei Dong",   affiliation: "Professor · Boston University", role: "science", link: "https://www.bu.edu/astronomy/profile/chuanfei-dong/", photo: "/people/chuanfei-dong.jpg", initials: "CD", gradient: GRAD_B },
+  { name: "Tian Zhou",       affiliation: "Earth Scientist · PNNL",        role: "science", link: "https://www.pnnl.gov/people/tian-zhou",         photo: "/people/tian-zhou.jpg",      initials: "TZ", gradient: GRAD_C },
 
   // Postdoc
   { name: "Zigong Xu",       affiliation: "Postdoc · Caltech",             role: "postdoc",  link: "https://zigongxu.github.io/",                  photo: "/people/zigong-xu.jpg",      initials: "ZX", gradient: GRAD_C },
@@ -177,7 +178,7 @@ export const people: Person[] = [
   { name: "Hejia Geng",      affiliation: "Researcher · Oxford",           role: "scholars",                       link: "https://scholar.google.com/citations?hl=en&user=ameiXi0AAAAJ",                       photo: "/people/hejia-geng.jpg",     initials: "HG", gradient: GRAD_B },
   { name: "Jiachen Liu",     affiliation: "Meta",                          role: "scholars",                       link: "https://amberljc.github.io/",                                                          photo: "/people/jiachen-liu.jpg",   initials: "JL", gradient: GRAD_G },
   { name: "Yuhan Wang",      affiliation: "PhD Student · ETH Zürich",      role: "scholars", link: "https://www.linkedin.com/in/yuhan-wang-aa2564214/",                                                  photo: "/people/yuhan-wang.jpg",     initials: "YW", gradient: GRAD_A },
-  { name: "Liting Mai",      affiliation: "UIUC",                          role: "scholars",                                                                                                                    initials: "LM", gradient: GRAD_D },
+  { name: "Liting Mai",      affiliation: "UIUC",                          role: "scholars",                                                                                                                    photo: "/people/liting-mai.jpg",     initials: "LM", gradient: GRAD_D },
 ];
 
 export const ROLE_SECTIONS: {
