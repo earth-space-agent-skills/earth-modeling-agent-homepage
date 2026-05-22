@@ -133,7 +133,7 @@ export const skillGroups: SkillGroup[] = [
 // Partner skill repos are folded into skillGroups above as additional domain groups.
 // /#partners is now a People grid.
 
-export type PersonRole = "science" | "postdoc" | "executive" | "scholars";
+export type PersonRole = "science" | "executive" | "scholars";
 
 export type Person = {
   name: string;
@@ -165,20 +165,18 @@ export const people: Person[] = [
   { name: "Chuanfei Dong",   affiliation: "Professor · Boston University", role: "science", link: "https://www.bu.edu/astronomy/profile/chuanfei-dong/", photo: "/people/chuanfei-dong.jpg", initials: "CD", gradient: GRAD_B },
   { name: "Tian Zhou",       affiliation: "Earth Scientist · PNNL",        role: "science", link: "https://www.pnnl.gov/people/tian-zhou",         photo: "/people/tian-zhou.jpg",      initials: "TZ", gradient: GRAD_C },
 
-  // Postdoc
-  { name: "Zigong Xu",       affiliation: "Postdoc · Caltech",             role: "postdoc",  link: "https://zigongxu.github.io/",                  photo: "/people/zigong-xu.jpg",      initials: "ZX", gradient: GRAD_C },
-
   // Executive Committee
   { name: "Zesen Huang",     affiliation: "Postdoc · UCLA",                role: "executive", author: true, note: "corresponding", github: "huangzesen", link: "https://lingtai.ai/en/about/",                            photo: "/people/zesen.JPG",          initials: "ZH", gradient: GRAD_D },
   { name: "Koutian Wu",      affiliation: "PhD Student · UT Austin",       role: "executive", author: true, github: "ktwu01",     link: "https://scholar.google.com/citations?user=s9w1k-cAAAAJ&hl=en", photo: "/people/KW-SF.png",          initials: "KW", gradient: GRAD_H },
 
   // Scholars
+  { name: "Zigong Xu",       affiliation: "Postdoc · Caltech",             role: "scholars", link: "https://zigongxu.github.io/",                                                                                photo: "/people/zigong-xu.jpg",      initials: "ZX", gradient: GRAD_C },
   { name: "Weihao Liu",      affiliation: "PhD Candidate · UMich",         role: "scholars", author: true, link: "https://www.linkedin.com/in/weihao-liu-36562717b",                                              photo: "/people/weihao-liu.jpg",     initials: "WL", gradient: GRAD_E },
   { name: "Liuwei Xu",       affiliation: "PhD Student · UCLA",            role: "scholars", github: "liuwei1997", link: "https://liuwei1997.github.io/",                                                photo: "/people/liuwei-xu.jpg",     initials: "LX", gradient: GRAD_F },
   { name: "Hejia Geng",      affiliation: "Researcher · Oxford",           role: "scholars",                       link: "https://scholar.google.com/citations?hl=en&user=ameiXi0AAAAJ",                       photo: "/people/hejia-geng.jpg",     initials: "HG", gradient: GRAD_B },
   { name: "Jiachen Liu",     affiliation: "Meta",                          role: "scholars",                       link: "https://amberljc.github.io/",                                                          photo: "/people/jiachen-liu.jpg",   initials: "JL", gradient: GRAD_G },
   { name: "Yuhan Wang",      affiliation: "PhD Student · ETH Zürich",      role: "scholars", link: "https://www.linkedin.com/in/yuhan-wang-aa2564214/",                                                  photo: "/people/yuhan-wang.jpg",     initials: "YW", gradient: GRAD_A },
-  { name: "Liting Mai",      affiliation: "UIUC",                          role: "scholars",                                                                                                                    photo: "/people/liting-mai.jpg",     initials: "LM", gradient: GRAD_D },
+  { name: "Liting Mai",      affiliation: "PhD Student · UIUC",            role: "scholars",                                                                                                                    photo: "/people/liting-mai.jpg",     initials: "LM", gradient: GRAD_D },
 ];
 
 export const ROLE_SECTIONS: {
@@ -196,22 +194,15 @@ export const ROLE_SECTIONS: {
     lede: "Faculty advisors and principal investigators whose groups anchor the research agenda.",
   },
   {
-    role: "postdoc",
-    idx: "02",
-    label: "Postdoctoral Researchers",
-    eyebrow: "§ Postdoctoral Researchers",
-    lede: "Postdocs leading research directions, mentoring scholars, and translating science into shippable skill packages.",
-  },
-  {
     role: "executive",
-    idx: "03",
+    idx: "02",
     label: "Executive Committee",
     eyebrow: "§ Executive Committee",
     lede: "Day-to-day operations: releases, issue triage, docs, partner outreach, funder relations, and research-integrity review. The committee reports to the community.",
   },
   {
     role: "scholars",
-    idx: "04",
+    idx: "03",
     label: "Scholars",
     eyebrow: "§ Scholars",
     lede: "Researchers contributing code, papers, knowledge units, and evaluation tasks. Contribution is the organizing principle.",
