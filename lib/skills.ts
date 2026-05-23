@@ -161,6 +161,7 @@ const GRAD_H = "linear-gradient(165deg, #e4ecf5 0%, #a8bdd6 45%, #27344a 110%)";
 
 export const people: Person[] = [
   // Scientific Committee
+  { name: "Vassilis Angelopoulos", affiliation: "Professor · UCLA",        role: "science", link: "https://epss.ucla.edu/vassilis-angelopoulos/",  photo: "/people/vassilis-angelopoulos.jpg", initials: "VA", gradient: GRAD_E },
   { name: "Marco Velli",     affiliation: "Professor · UCLA",              role: "science", link: "https://epss.ucla.edu/marco-velli/",            photo: "/people/marco-velli.jpg",    initials: "MV", gradient: GRAD_A },
   { name: "Chuanfei Dong",   affiliation: "Professor · Boston University", role: "science", link: "https://www.bu.edu/astronomy/profile/chuanfei-dong/", photo: "/people/chuanfei-dong.jpg", initials: "CD", gradient: GRAD_B },
   { name: "Tian Zhou",       affiliation: "Earth Scientist · PNNL",        role: "science", link: "https://www.pnnl.gov/people/tian-zhou",         photo: "/people/tian-zhou.jpg",      initials: "TZ", gradient: GRAD_C },
