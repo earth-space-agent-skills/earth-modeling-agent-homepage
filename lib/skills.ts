@@ -165,7 +165,7 @@ export const people: Person[] = [
   { name: "Jacob Bortnik",   affiliation: "Professor · UCLA",              role: "science", link: "https://www.space.ucla.edu/jacob-bortnik",      photo: "/people/jacob-bortnik.jpg", initials: "JB", gradient: GRAD_D },
   { name: "Marco Velli",     affiliation: "Professor · UCLA",              role: "science", link: "https://epss.ucla.edu/marco-velli/",            photo: "/people/marco-velli.jpg",    initials: "MV", gradient: GRAD_A },
   { name: "Chuanfei Dong",   affiliation: "Professor · Boston University", role: "science", link: "https://www.bu.edu/astronomy/profile/chuanfei-dong/", photo: "/people/chuanfei-dong.jpg", initials: "CD", gradient: GRAD_B },
-  { name: "Tian Zhou",       affiliation: "Earth Scientist · PNNL",        role: "science", link: "https://www.pnnl.gov/people/tian-zhou",         photo: "/people/tian-zhou.jpg",      initials: "TZ", gradient: GRAD_C },
+  { name: "Tian Zhou",       affiliation: "Scientist · PNNL",              role: "science", link: "https://www.pnnl.gov/people/tian-zhou",         photo: "/people/tian-zhou.jpg",      initials: "TZ", gradient: GRAD_C },
 
   // Executive Committee
   { name: "Zesen Huang",     affiliation: "Postdoc · UCLA",                role: "executive", author: true, note: "corresponding", github: "huangzesen", link: "https://lingtai.ai/en/about/",                            photo: "/people/zesen.JPG",          initials: "ZH", gradient: GRAD_D },
@@ -176,7 +176,7 @@ export const people: Person[] = [
   { name: "Weihao Liu",      affiliation: "PhD Candidate · UMich",         role: "scholars", author: true, link: "https://www.linkedin.com/in/weihao-liu-36562717b",                                              photo: "/people/weihao-liu.jpg",     initials: "WL", gradient: GRAD_E },
   { name: "Liuwei Xu",       affiliation: "PhD Student · UCLA",            role: "scholars", github: "liuwei1997", link: "https://liuwei1997.github.io/",                                                photo: "/people/liuwei-xu.jpg",     initials: "LX", gradient: GRAD_F },
   { name: "Hejia Geng",      affiliation: "Researcher · Oxford",           role: "scholars",                       link: "https://scholar.google.com/citations?hl=en&user=ameiXi0AAAAJ",                       photo: "/people/hejia-geng.jpg",     initials: "HG", gradient: GRAD_B },
-  { name: "Jiachen Liu",     affiliation: "Meta",                          role: "scholars",                       link: "https://amberljc.github.io/",                                                          photo: "/people/jiachen-liu.jpg",   initials: "JL", gradient: GRAD_G },
+  { name: "Jiachen Liu",     affiliation: "Scientist · META",              role: "scholars",                       link: "https://amberljc.github.io/",                                                          photo: "/people/jiachen-liu.jpg",   initials: "JL", gradient: GRAD_G },
   { name: "Yuhan Wang",      affiliation: "PhD Student · ETH Zürich",      role: "scholars", link: "https://www.linkedin.com/in/yuhan-wang-aa2564214/",                                                  photo: "/people/yuhan-wang.jpg",     initials: "YW", gradient: GRAD_A },
   { name: "Liting Mai",      affiliation: "PhD Student · UIUC",            role: "scholars",                                                                                                                    photo: "/people/liting-mai.jpg",     initials: "LM", gradient: GRAD_D },
 ];
