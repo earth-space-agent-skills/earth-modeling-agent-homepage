@@ -227,6 +227,7 @@ export default function HomePage() {
         </p>
         <p className="reveal coda-sub">
           Contact:{" "}
+          <a href="mailto:zesenhuang@g.ucla.edu">zesenhuang@g.ucla.edu</a>;{" "}
           <a href="mailto:ktwu@utexas.edu">ktwu@utexas.edu</a>
         </p>
         <div className="ctas reveal">

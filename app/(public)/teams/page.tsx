@@ -150,7 +150,7 @@ export default function TeamsPage() {
       <section className="coda">
         <h2 className="reveal">Don&rsquo;t see your name here?</h2>
         <p className="reveal">
-          <a href="mailto:ktwu@utexas.edu">contact ktwu@utexas.edu</a>.
+          contact <a href="mailto:zesenhuang@g.ucla.edu">zesenhuang@g.ucla.edu</a>; <a href="mailto:ktwu@utexas.edu">ktwu@utexas.edu</a>.
         </p>
       </section>
     </>
