@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     publishedISO: "2026-05-28",
     status: "published",
     excerpt:
-      "Two threads from Boston University: a Fourier Neural Operator approach to plasma modeling published in PNAS, and the Mauve satellite mission surveying stellar UV activity to inform exoplanet habitability.",
+      "Two threads from Boston University: a Fourier Neural Operator approach to plasma modeling published in PNAS, and the Mauve satellite mission surveying stellar UV activity to inform exoplanet habitability, extending a 2018 TRAPPIST-1 atmosphere prediction later verified by JWST.",
   },
 ];
 

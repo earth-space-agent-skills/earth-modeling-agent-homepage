@@ -22,7 +22,7 @@ const focusCards = [
   {
     title: "Stellar activity and habitability",
     body:
-      "Mauve studies stellar magnetic activity, flares, and high-energy radiation across the Milky Way in ultraviolet light, including coronal mass ejection detection through spectral lines and post-flare dimming.",
+      "Mauve studies stellar magnetic activity, flares, and high-energy radiation across the Milky Way in ultraviolet light, including coronal mass ejection detection through spectral lines and post-flare dimming. A 2018 Dong paper predicted that close-in rocky planets in the TRAPPIST-1 system would lack atmospheres, a prediction later verified by James Webb Space Telescope observations.",
   },
 ];
 
@@ -31,6 +31,10 @@ const sources = [
     label:
       "AI-powered breakthrough in plasma science (BU Hariri Institute, 2025)",
     href: "https://www.bu.edu/hic/2025/03/20/ai-powered-breakthrough-in-plasma-science-delivers-new-computational-efficiencies-unlocks-potential-for-space-and-fusion-research/",
+  },
+  {
+    label: "Big Picture 2024, BU CAS Arts × Sciences Magazine",
+    href: "https://www.bu.edu/cas/arts-sciences/2024/big-picture-2024/",
   },
   {
     label:
@@ -125,8 +129,9 @@ export default function ChuanfeiDongFeaturedAiBlogPage() {
               FNO-based approach can replicate the results of fully kinetic
               simulations at a fraction of the cost. The work was published in
               the Proceedings of the National Academy of Sciences, with support
-              from NASA grant 80NSSC23K0908 and an Alfred P. Sloan Research
-              Fellowship.
+              from NASA grant 80NSSC23K0908 and a 2024 Alfred P. Sloan Research
+              Fellowship. Dong earned his PhD at the University of Michigan,
+              studying plasma physics and the solar wind interaction with Mars.
             </p>
 
             <p>
@@ -177,6 +182,19 @@ export default function ChuanfeiDongFeaturedAiBlogPage() {
               the input any serious habitability assessment needs, because
               flares and high-energy radiation shape what a planetary
               atmosphere can hold onto over time.
+            </p>
+
+            <p>
+              The Mauve program builds on prior work in the same lineage. In a
+              2018 paper, Dong predicted that the close-in rocky planets in the
+              TRAPPIST-1 system would lack atmospheres. James Webb Space
+              Telescope observations later verified that prediction. As Dong
+              describes the reasoning, &quot;If we observe that a star is
+              highly magnetically active, with a lot of flares and coronal
+              mass ejection events, then it&apos;s implied the close-in rocky
+              exoplanets probably won&apos;t have an atmosphere.&quot; Mauve
+              extends that same logic from a single system to a broader survey
+              of stellar activity across the galaxy.
             </p>
 
             <p>
