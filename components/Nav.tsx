@@ -66,6 +66,7 @@ export function Nav() {
   const aboutHref = isHome ? "#about" : "/#about";
   const skillsHref = isHome ? "#skills" : "/#skills";
   const teamsHref = "/teams";
+  const blogHref = "/blog/koutian-wu-ai-for-earth-space-modeling";
   const contributeHref = isHome ? "#contribute" : "/#contribute";
 
   return (
@@ -102,6 +103,7 @@ export function Nav() {
             </div>
           </div>
           <a href={teamsHref}>Teams</a>
+          <a href={blogHref}>Blog</a>
           <a href={contributeHref}>Contribute</a>
         </div>
 
@@ -165,6 +167,7 @@ export function Nav() {
         <a className="nav-mobile-link" href={aboutHref}>About</a>
         <a className="nav-mobile-link" href={skillsHref}>Skills</a>
         <a className="nav-mobile-link" href={teamsHref}>Teams</a>
+        <a className="nav-mobile-link" href={blogHref}>Blog</a>
         <a className="nav-mobile-link" href={contributeHref}>Contribute</a>
 
         <div className="nav-mobile-footer">

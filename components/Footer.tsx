@@ -41,7 +41,7 @@ export function Footer() {
           <ul>
             {skillGroups.map((g) => (
               <li key={g.slug}>
-                <a href={`#${g.slug}`}>{g.short}</a>
+                <a href={`/#${g.slug}`}>{g.short}</a>
               </li>
             ))}
           </ul>
@@ -55,13 +55,18 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="/#about">About</a>
             </li>
             <li>
-              <a href="#partners">Partner skills</a>
+              <a href="/blog/koutian-wu-ai-for-earth-space-modeling">
+                Featured AI blog
+              </a>
             </li>
             <li>
-              <a href="#contribute">Contribute</a>
+              <a href="/teams">Teams</a>
+            </li>
+            <li>
+              <a href="/#contribute">Contribute</a>
             </li>
           </ul>
         </div>

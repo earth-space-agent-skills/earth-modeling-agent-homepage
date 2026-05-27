@@ -132,6 +132,48 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="featured-ai-band" id="featured-ai">
+        <div className="featured-ai-inner">
+          <div className="featured-ai-copy">
+            <span className="mono reveal">Featured AI Blog</span>
+            <h2 className="featured-ai-title reveal">
+              Koutian Wu on AI agents for Earth and space models.
+            </h2>
+            <p className="featured-ai-lede reveal">
+              A profile of benchmark design, physics-aware code assistance,
+              scientific skill extraction, and daily AI-assisted research
+              workflows. Responding editor: Zesen Huang.
+            </p>
+            <div className="featured-ai-actions reveal">
+              <a
+                className="btn primary"
+                href="/blog/koutian-wu-ai-for-earth-space-modeling"
+              >
+                Read the feature <span className="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <a
+            className="featured-ai-card reveal"
+            href="/blog/koutian-wu-ai-for-earth-space-modeling"
+          >
+            <div className="featured-ai-card-photo">
+              <img src="/people/KW-SF.png" alt="Koutian Wu" />
+            </div>
+            <div className="featured-ai-card-body">
+              <span className="card-eyebrow">Featured AI Blog</span>
+              <h3>Koutian Wu, AI for Earth and Space Models.</h3>
+              <p>
+                How evaluation, agent workflows, and scientific modeling meet
+                in one research practice.
+              </p>
+              <span className="featured-ai-card-link">Open article</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
       <section className="stakes directions" id="skills">
         <div className="stakes-inner">
           <div className="stakes-main">
