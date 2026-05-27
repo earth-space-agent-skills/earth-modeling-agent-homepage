@@ -58,7 +58,7 @@ export function Footer() {
               <a href="/#about">About</a>
             </li>
             <li>
-              <a href="/blog/koutian-wu-ai-for-earth-space-modeling">
+              <a href="/blog">
                 Featured AI blog
               </a>
             </li>

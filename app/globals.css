@@ -1271,6 +1271,108 @@ a.research-owner-link:focus-visible .research-owner-name {
   }
 }
 
+/* Blog index list */
+.blog-index-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  max-width: 1100px;
+}
+.blog-index-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 200px) minmax(0, 1fr);
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  color: inherit;
+  text-decoration: none;
+  min-height: 220px;
+  transition: border-color .2s var(--ease), transform .2s var(--ease), background .2s var(--ease);
+}
+.blog-index-row:hover,
+.blog-index-row:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  background: var(--paper);
+  outline: none;
+}
+.blog-index-row.is-coming-soon {
+  opacity: .72;
+}
+.blog-index-row.is-coming-soon:hover,
+.blog-index-row.is-coming-soon:focus-visible {
+  opacity: 1;
+}
+.blog-index-photo {
+  min-width: 0;
+  background: var(--paper-3);
+  overflow: hidden;
+  border-right: 1px solid var(--line);
+}
+.blog-index-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.blog-index-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 28px;
+  min-width: 0;
+}
+.blog-index-body h3 {
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.18;
+  letter-spacing: 0;
+  color: var(--ink);
+  margin: 0;
+}
+.blog-index-body p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-3);
+  margin: 0;
+}
+.blog-index-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.blog-index-meta span {
+  display: grid;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-4);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.blog-index-meta b {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--ink);
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .blog-index-row {
+    grid-template-columns: 1fr;
+  }
+  .blog-index-photo {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    aspect-ratio: 4 / 3;
+  }
+}
+
 /* ---- Pillar stack block (what feeds this pillar) ---- */
 .pillar-stack {
   padding: 56px var(--pad-x);

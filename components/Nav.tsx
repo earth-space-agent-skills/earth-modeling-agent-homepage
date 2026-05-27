@@ -66,7 +66,7 @@ export function Nav() {
   const aboutHref = isHome ? "#about" : "/#about";
   const skillsHref = isHome ? "#skills" : "/#skills";
   const teamsHref = "/teams";
-  const blogHref = "/blog/koutian-wu-ai-for-earth-space-modeling";
+  const blogHref = "/blog";
   const contributeHref = isHome ? "#contribute" : "/#contribute";
 
   return (
