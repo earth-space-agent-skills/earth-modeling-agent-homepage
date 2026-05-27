@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     subjectAffiliation: "PhD Student · UT Austin",
     subjectPhoto: "/people/KW-SF.png",
     editorName: "Zesen Huang",
-    publishedISO: "2026-05-27",
+    publishedISO: "2026-05-25",
     status: "published",
     excerpt:
       "A profile of benchmark design, physics-aware code assistance, scientific skill extraction, and daily AI-assisted research workflows.",
@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
     subjectAffiliation: "Postdoc · UCLA",
     subjectPhoto: "/people/zesen.JPG",
     editorName: "Koutian Wu",
-    publishedISO: "",
+    publishedISO: "2026-05-27",
     status: "coming-soon",
     excerpt: "Featured blog coming soon. Edited by Koutian Wu.",
   },
@@ -43,12 +43,26 @@ export const blogPosts: BlogPost[] = [
     subjectAffiliation: "Professor · Boston University",
     subjectPhoto: "/people/chuanfei-dong.jpg",
     editorName: "Koutian Wu",
-    publishedISO: "2026-05-27",
+    publishedISO: "2026-05-28",
     status: "published",
     excerpt:
       "Two threads from Boston University: a Fourier Neural Operator approach to plasma modeling published in PNAS, and the Mauve satellite mission surveying stellar UV activity to inform exoplanet habitability.",
   },
 ];
+
+// Auto-sort newest-first by publishedISO so the /blog index always shows
+// the latest post first. Posts without a publishedISO (e.g. older
+// coming-soon entries) sort to the end. Mutating the exported array in
+// place keeps the existing `import { blogPosts }` consumers working with
+// zero changes.
+blogPosts.sort((a, b) => {
+  if (a.publishedISO && b.publishedISO) {
+    return b.publishedISO.localeCompare(a.publishedISO);
+  }
+  if (a.publishedISO) return -1;
+  if (b.publishedISO) return 1;
+  return 0;
+});
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
