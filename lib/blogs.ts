@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     subjectAffiliation: "PhD Student · UT Austin",
     subjectPhoto: "/people/KW-SF.png",
     editorName: "Zesen Huang",
-    publishedISO: "2026-05-25",
+    publishedISO: "2026-05-27",
     status: "published",
     excerpt:
       "A profile of benchmark design, physics-aware code assistance, scientific skill extraction, and daily AI-assisted research workflows.",
@@ -43,7 +43,7 @@ export const blogPosts: BlogPost[] = [
     subjectAffiliation: "Professor · Boston University",
     subjectPhoto: "/people/chuanfei-dong.jpg",
     editorName: "Koutian Wu",
-    publishedISO: "2026-05-28",
+    publishedISO: "2026-05-27",
     status: "published",
     excerpt:
       "Two threads from Boston University: a Fourier Neural Operator approach to plasma modeling published in PNAS, and the Mauve satellite mission surveying stellar UV activity to inform exoplanet habitability, extending a 2018 TRAPPIST-1 atmosphere prediction later verified by JWST.",
