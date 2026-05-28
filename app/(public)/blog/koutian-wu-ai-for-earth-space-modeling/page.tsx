@@ -94,7 +94,7 @@ export default function KoutianFeaturedAiBlogPage() {
                 </span>
                 <span>
                   Published
-                  <b>May 27, 2026</b>
+                  <b>May 25, 2026</b>
                 </span>
               </div>
             </div>

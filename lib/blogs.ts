@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     subjectAffiliation: "PhD Student · UT Austin",
     subjectPhoto: "/people/KW-SF.png",
     editorName: "Zesen Huang",
-    publishedISO: "2026-05-27",
+    publishedISO: "2026-05-25",
     status: "published",
     excerpt:
       "A profile of benchmark design, physics-aware code assistance, scientific skill extraction, and daily AI-assisted research workflows.",
