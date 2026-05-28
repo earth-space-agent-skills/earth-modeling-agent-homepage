@@ -5,32 +5,42 @@ const articlePath = "/blog/chuanfei-dong-space-physics-modeling";
 
 const focusCards = [
   {
-    title: "AI-plasma fluid modeling",
+    title: "Exoplanet atmospheres",
     body:
-      "A Fourier Neural Operator approach that brings kinetic-physics behavior into a fluid plasma model, reported in PNAS with collaborators Ziyu Huang (lead) and Liang Wang.",
+      "A 2018 paper argued that close-in rocky planets around active M-dwarfs, including the TRAPPIST-1 worlds, would struggle to hold onto their atmospheres under stellar wind and ionizing radiation. Later JWST observations of TRAPPIST-1 b and c are consistent with the parts of that concern tested so far.",
   },
   {
-    title: "Mauve stellar UV survey",
+    title: "Space weather around Earth",
     body:
-      "Principal investigator on Mauve, a satellite the size of a microwave oven carrying a UV telescope, launched November 28, 2025 from Vandenberg Space Force Base on a SpaceX vehicle for a three-year survey.",
+      "The same plasma physics drives geomagnetic storms, threatens satellite operations, and stresses power grids. Honest forecasting needs kinetic behavior in domains where direct kinetic simulation is out of reach.",
   },
   {
-    title: "Cross-domain plasma applications",
+    title: "An FNO closure as the bridge",
     body:
-      "The same modeling approach is aimed at space weather forecasting, fusion reactor plasmas, and astrophysical environments around black holes and neutron stars.",
+      "A Fourier Neural Operator trained on first-principles Vlasov simulations and plugged into a fluid plasma model as a heat-flux closure reproduces nonlinear Landau damping at a small fraction of the kinetic cost. Published in PNAS with Ziyu Huang as lead author and Liang Wang.",
   },
   {
-    title: "Stellar activity and habitability",
+    title: "Mauve, the observational half",
     body:
-      "Mauve studies stellar magnetic activity, flares, and high-energy radiation across the Milky Way in ultraviolet light, including coronal mass ejection detection through spectral lines and post-flare dimming. A 2018 Dong paper predicted that close-in rocky planets in the TRAPPIST-1 system would lack atmospheres, a prediction later verified by James Webb Space Telescope observations.",
+      "Dong is a principal investigator on Mauve, a small UV telescope launched in late 2025 for a three-year survey of stellar magnetic activity, flares, and high-energy radiation, the inputs any habitability claim about a close-in rocky planet has to respect.",
   },
 ];
 
 const sources = [
   {
     label:
+      "Huang, Dong, Wang. Machine-learning heat flux closure for multi-moment fluid modeling of nonlinear Landau damping. PNAS 122(11), 2025",
+    href: "https://www.pnas.org/doi/10.1073/pnas.2419073122",
+  },
+  {
+    label:
       "AI-powered breakthrough in plasma science (BU Hariri Institute, 2025)",
     href: "https://www.bu.edu/hic/2025/03/20/ai-powered-breakthrough-in-plasma-science-delivers-new-computational-efficiencies-unlocks-potential-for-space-and-fusion-research/",
+  },
+  {
+    label:
+      "Is there life in space? Astronomer leads new mission (BU Today, 2025)",
+    href: "https://www.bu.edu/articles/2025/is-there-life-in-space-astronomer-leads-new-mission/",
   },
   {
     label: "Big Picture 2024, BU CAS Arts × Sciences Magazine",
@@ -38,8 +48,13 @@ const sources = [
   },
   {
     label:
-      "Is there life in space? Astronomer leads new mission (BU Today, 2025)",
-    href: "https://www.bu.edu/articles/2025/is-there-life-in-space-astronomer-leads-new-mission/",
+      "Three BU Scholars Receive 2024 Sloan Research Fellowships (BU Today, 2024)",
+    href: "https://www.bu.edu/articles/2024/three-bu-scholars-receive-2024-sloan-research-fellowships/",
+  },
+  {
+    label:
+      "What is Webb revealing about the TRAPPIST-1 system? (NASA, science explainer)",
+    href: "https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-is-webb-revealing-about-the-trappist-1-system/",
   },
   {
     label: "Chuanfei Dong, Department of Astronomy, Boston University",
@@ -48,9 +63,9 @@ const sources = [
 ];
 
 export const metadata: Metadata = {
-  title: `Chuanfei Dong, AI and physics for space and stars · ${ORG_NAME}`,
+  title: `Chuanfei Dong, AI for the space environments we want to understand · ${ORG_NAME}`,
   description:
-    "A featured AI blog profile of Chuanfei Dong (Boston University), covering Fourier Neural Operator plasma modeling published in PNAS and the Mauve stellar UV mission.",
+    "A featured AI blog profile of Chuanfei Dong (Boston University): using a Fourier Neural Operator inside a plasma model to make space weather and exoplanet habitability tractable, with the Mauve UV mission as the observational counterpart.",
   alternates: {
     canonical: articlePath,
   },
@@ -69,13 +84,18 @@ export default function ChuanfeiDongFeaturedAiBlogPage() {
             </div>
             <span className="page-idx reveal">§ Featured AI Blog</span>
             <h1 className="page-title reveal">
-              Chuanfei Dong, AI and physics for space and stars.
+              Chuanfei Dong
+              <span className="page-title-sub">
+                AI for the space environments we want to understand.
+              </span>
             </h1>
             <p className="page-thesis reveal">
-              Chuanfei Dong works on two connected threads: a Fourier Neural
-              Operator approach to plasma modeling, and the Mauve satellite
-              mission that surveys stellar activity to help judge which
-              exoplanets could support life.
+              From space weather around Earth to whether a rocky planet in the
+              TRAPPIST-1 system can hold onto an atmosphere, the same plasma
+              physics keeps showing up, and it costs too much to simulate
+              directly at the scales that matter. Chuanfei Dong is using AI to
+              close that gap from both sides: a learned operator inside the
+              physics model, and a UV telescope on the observational side.
             </p>
           </div>
 
@@ -110,101 +130,79 @@ export default function ChuanfeiDongFeaturedAiBlogPage() {
         <div className="ai-article-layout">
           <article className="article-prose reveal">
             <p className="article-lede">
-              Chuanfei Dong&apos;s recent work moves along two tracks that meet
-              in the same question: when can we trust a model of a plasma we
-              cannot fully simulate, and what does that mean for stars and the
-              planets around them. One track puts machine learning inside a
-              fluid plasma model. The other puts a small ultraviolet telescope
-              in orbit to watch active stars.
+              The search for habitable worlds keeps running into the same wall.
+              We can see the planets. We can see, in ultraviolet light, how
+              violent their host stars are. What we cannot afford to do is
+              simulate, from first principles and at scale, the plasma physics
+              that decides whether a flare or a coronal mass ejection strips a
+              close-in rocky planet of its atmosphere. Chuanfei Dong&apos;s
+              work is about closing that gap, with AI inside the physics and a
+              UV telescope outside it.
             </p>
 
             <p>
-              The first track is an AI-plasma study led from Boston University.
-              Working with Ziyu Huang (lead) and Liang Wang, Dong&apos;s group
-              integrates machine learning with kinetic physics inside a fluid
-              plasma model, using the Fourier Neural Operator (FNO). The
-              motivation is that fully kinetic simulations are expensive, and
-              many problems of interest sit beyond what direct simulation can
-              cover at scale. The BU Hariri Institute reports that the
-              FNO-based approach can replicate the results of fully kinetic
-              simulations at a fraction of the cost. The work was published in
-              the Proceedings of the National Academy of Sciences, with support
-              from NASA grant 80NSSC23K0908 and a 2024 Alfred P. Sloan Research
-              Fellowship. Dong earned his PhD at the University of Michigan,
-              studying plasma physics and the solar wind interaction with Mars.
+              The space problem is concrete. In a 2018 paper, Dong argued that
+              close-in rocky planets around active M-dwarf stars, including
+              the worlds in the TRAPPIST-1 system, would struggle to hold onto
+              their atmospheres in the face of strong stellar wind and
+              ionizing radiation. Later James Webb Space Telescope
+              observations of TRAPPIST-1 b and c are consistent with the
+              parts of that concern that have been tested so far, while
+              planets further out in the same system remain under study. The
+              same plasma physics shows up much closer to home, in the space
+              weather that drives geomagnetic storms, threatens satellites,
+              and stresses power grids. In both cases, a serious answer needs
+              kinetic plasma behavior in domains where running a kinetic
+              simulation directly is out of reach.
             </p>
 
             <p>
-              In Dong&apos;s own words, the target problem is the hard part of
-              plasma physics. &quot;This research focuses on nonlinear plasma
-              phenomena, where plasma waves and charged particles interact in
-              highly intricate ways. These processes have traditionally been
-              difficult to model without expensive kinetic simulations.&quot;
-              The framing he gives the result is equally direct. &quot;By
-              combining artificial intelligence with fundamental physics, this
-              study marks a major step forward in computational plasma science,
-              offering a powerful new tool for researchers across multiple
-              disciplines.&quot;
+              That is the obstacle Dong&apos;s recent paper, published in the
+              Proceedings of the National Academy of Sciences with Ziyu Huang
+              as lead author and Liang Wang as collaborator, sets out to
+              address. The team trains a Fourier Neural Operator on
+              first-principles Vlasov simulations of a kinetic plasma, then
+              plugs the trained operator into a much cheaper fluid model as a
+              heat-flux closure. The resulting hybrid reproduces nonlinear
+              Landau damping, a textbook kinetic phenomenon, at a small
+              fraction of the cost of the Vlasov reference. Dong, who advised
+              the work as principal investigator and held a 2024 Alfred P.
+              Sloan Research Fellowship, frames the design choice cleanly.
+              The FNO does not replace the physics solver. It learns one
+              operator the solver needs and otherwise cannot get right, then
+              hands the rest of the simulation back to the equations.
             </p>
 
             <p>
-              The application surface is broad on purpose. The same class of
-              model is aimed at space weather forecasting, which matters for
-              satellite operations and power grid protection, at fusion energy
-              research and reactor plasma behavior, and at astrophysical
-              environments such as the magnetized plasmas around black holes
-              and neutron stars. The common thread is that each setting needs
-              kinetic-level behavior in regimes where a purely fluid model is
-              not enough and a fully kinetic one is too costly.
+              For space science, that is the point. The same kinetic-inside-a-
+              fluid-model bottleneck is what makes high-fidelity space weather
+              prediction around Earth, modeling of the solar wind&apos;s
+              interaction with planetary atmospheres, and any honest attempt
+              to forecast atmospheric loss at an exoplanet so expensive
+              today. A closure that carries kinetic physics into a fluid run
+              is, in principle, the seam where AI changes what the field can
+              afford to ask. The honest framing of the PNAS result is that it
+              demonstrates the trick in one regime against the harder
+              reference, and opens a clear question about how far the same
+              closure idea travels into magnetospheres, stellar winds, and
+              exoplanet environments.
             </p>
 
             <p>
-              The second track is Mauve, where Dong is a principal
-              investigator. Mauve is a satellite smaller than a microwave oven,
-              equipped with a UV telescope. It launched on November 28, 2025
-              from Vandenberg Space Force Base on a SpaceX vehicle, and the
-              mission runs for three years. Mauve surveys stellar magnetic
-              activity, flares, and high-energy radiation across the Milky Way
-              galaxy in ultraviolet light, and it detects coronal mass
-              ejections through spectral line analysis and through the dimming
-              of stellar light after flares. The mission is funded by the
-              European Union&apos;s Horizon Europe research program and by UK
-              Research and Innovation&apos;s Horizon Europe guarantee scheme,
-              and its survey program is open to scientists worldwide, including
-              PhD students and early-career researchers.
-            </p>
-
-            <p>
-              The connection to habitability is explicit. As Dong puts it,
-              &quot;By understanding active stars and their impacts, Mauve
-              directly advances our ability to assess which exoplanets could
-              support life.&quot; UV characterization of a host star is part of
-              the input any serious habitability assessment needs, because
-              flares and high-energy radiation shape what a planetary
-              atmosphere can hold onto over time.
-            </p>
-
-            <p>
-              The Mauve program builds on prior work in the same lineage. In a
-              2018 paper, Dong predicted that the close-in rocky planets in the
-              TRAPPIST-1 system would lack atmospheres. James Webb Space
-              Telescope observations later verified that prediction. As Dong
-              describes the reasoning, &quot;If we observe that a star is
-              highly magnetically active, with a lot of flares and coronal
-              mass ejection events, then it&apos;s implied the close-in rocky
-              exoplanets probably won&apos;t have an atmosphere.&quot; Mauve
-              extends that same logic from a single system to a broader survey
-              of stellar activity across the galaxy.
-            </p>
-
-            <p>
-              The two threads share a stance that fits {ORG_NAME}: be careful
-              about where physics, statistics, and AI can each be trusted, and
-              build the evaluations that let that judgement be made. The
-              plasma-modeling work asks where a learned operator can stand in
-              for kinetic simulation. The Mauve mission asks what we can
-              actually measure about a star before we claim its planets are
-              habitable. Both leave their answers open to the wider community.
+              The observational half of the same program is Mauve, where Dong
+              is a principal investigator. Mauve is a small ultraviolet
+              telescope that launched in late 2025 for a three-year survey of
+              stellar magnetic activity, flares, and high-energy radiation,
+              the very inputs that any habitability claim about a close-in
+              rocky planet has to respect. The modeling work and the mission
+              are not two stories. They are the two halves of one question:
+              measure how loud the star actually is, and have a physics model
+              fast enough to ask what that loudness does to the planet next
+              to it. That is what AI for space looks like in Dong&apos;s
+              hands, and it is the through-line that {ORG_NAME} is interested
+              in. The goal is not a faster plot. It is a working answer to
+              whether a given world is a barren rock or still a candidate for
+              an atmosphere.
             </p>
           </article>
 

@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "chuanfei-dong-space-physics-modeling",
-    title: "Chuanfei Dong, space physics modeling with AI.",
+    title: "Chuanfei Dong, AI for the space environments we want to understand.",
     subjectName: "Chuanfei Dong",
     subjectAffiliation: "Professor · Boston University",
     subjectPhoto: "/people/chuanfei-dong.jpg",
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     publishedISO: "2026-05-27",
     status: "published",
     excerpt:
-      "Two threads from Boston University: a Fourier Neural Operator approach to plasma modeling published in PNAS, and the Mauve satellite mission surveying stellar UV activity to inform exoplanet habitability, extending a 2018 TRAPPIST-1 atmosphere prediction later verified by JWST.",
+      "From space weather around Earth to whether a TRAPPIST-1 planet can hold onto an atmosphere, the same plasma physics shows up and is too expensive to simulate directly. Dong is using AI to close the gap from both sides: a learned operator inside the physics model, and the Mauve UV mission outside it.",
   },
 ];
 
