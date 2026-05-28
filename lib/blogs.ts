@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
     subjectAffiliation: "Postdoc · UCLA",
     subjectPhoto: "/people/zesen.JPG",
     editorName: "Koutian Wu",
-    publishedISO: "2026-05-27",
+    publishedISO: "",
     status: "coming-soon",
     excerpt: "Featured blog coming soon. Edited by Koutian Wu.",
   },
