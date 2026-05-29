@@ -166,6 +166,7 @@ export const people: Person[] = [
   { name: "Marco Velli",     affiliation: "Professor · UCLA",              role: "science", link: "https://epss.ucla.edu/marco-velli/",            photo: "/people/marco-velli.jpg",    initials: "MV", gradient: GRAD_A },
   { name: "Chuanfei Dong",   affiliation: "Professor · Boston University", role: "science", link: "https://www.bu.edu/astronomy/profile/chuanfei-dong/", photo: "/people/chuanfei-dong.jpg", initials: "CD", gradient: GRAD_B },
   { name: "Tian Zhou",       affiliation: "Scientist · PNNL",              role: "science", link: "https://www.pnnl.gov/people/tian-zhou",         photo: "/people/tian-zhou.jpg",      initials: "TZ", gradient: GRAD_C },
+  { name: "Dong Lin",        affiliation: "Assistant Professor · Clemson University", role: "science", link: "https://dlin7.org/",                  photo: "/people/dong-lin.jpg",       initials: "DL", gradient: GRAD_F },
 
   // Executive Committee
   { name: "Zesen Huang",     affiliation: "Postdoc · UCLA",                role: "executive", author: true, note: "corresponding", github: "huangzesen", link: "https://lingtai.ai/en/about/",                            photo: "/people/zesen.JPG",          initials: "ZH", gradient: GRAD_D },
